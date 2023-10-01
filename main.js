@@ -21,8 +21,9 @@ async function fetchData(){
     ); let data = await response.json();
     let newAmt = data.new_amount;
     outputAmt.value = newAmt;
-    if(inputAmt.value == 0){
-        alert("PROVIDE VALID INPUT VALUE")
+    if(inputAmt.value == "0"){
+        alert("INPUT VALUE CANNOT BE ZERO")
+        inputAmt.value = "1"
     }
 
 }
